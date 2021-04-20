@@ -2,11 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1.0_Olmo Mazcuñán S.L.</title>
-    <link href="styles/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Courgette|Lobster|Lobster+Two:400,400i,700,700i|Merienda:400,700&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="styles/normalize.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
     <script src="JS/jquery-3.4.1.min.js"></script>
     <script src="JS/scripts-1.0.js"></script>
 </head>
@@ -14,8 +15,11 @@
 <body>
     <header>
         <nav>
-            <img class ="logo" src="media/logo-mo-v.svg" alt="logo of Mushroom Organic">
-            <ul class="nav-drop">
+            <!-- <img class ="logo-v" src="media/logo-mo.svg" alt="logo of Mushroom Organic"> -->
+            <svg class="logo" id="outputsvg" xmlns="http://www.w3.org/2000/svg" style="transform: matrix(1.11388, 0, 0, 1.11388, 0, 0); transform-origin: 50% 50%; cursor: move; transition: transform 200ms ease-in-out 0s;" width="396" height="426" viewBox="0 0 3960 4260">
+                <g fill="rgb(250,250,250)" style="transform: none;"><path id="pmxHbRtjB" d="M1710 3909 c-337 -73 -499 -242 -556 -580 -20 -123 -15 -414 11 -579 24 -158 79 -428 130 -636 25 -103 45 -192 45 -200 0 -9 -8 -10 -30 -4 -58 17 -265 32 -345 25 -328 -27 -556 -148 -647 -341 -119 -255 65 -566 380 -640 84 -20 326 -14 417 11 264 71 455 165 830 409 221 143 380 238 481 286 404 192 744 168 869 -62 34 -63 45 -176 25 -267 -38 -176 -191 -397 -387 -561 -674 -562 -1516 -571 -2158 -24 l-80 68 54 -63 c69 -79 197 -189 309 -264 543 -361 1239 -346 1832 41 263 171 454 377 560 604 119 256 100 496 -53 664 -222 243 -630 258 -1065 40 -137 -69 -241 -132 -468 -283 -224 -150 -345 -226 -350 -220 -3 2 -9 67 -14 143 -13 181 -29 304 -95 734 -76 498 -89 614 -89 835 -1 220 15 317 69 432 43 92 99 152 183 196 104 55 178 71 322 71 193 0 327 -46 440 -151 102 -94 151 -231 169 -478 12 -157 -9 -615 -34 -745 -4 -18 -3 -21 4 -10 14 23 78 292 101 425 49 287 48 507 -5 687 -13 46 -23 83 -22 84 1 0 53 8 115 18 139 21 256 55 316 90 58 34 64 72 15 107 -116 82 -513 148 -934 155 -224 3 -260 2 -345 -17z"></path><path d="M1467 3140 c-14 -183 7 -400 87 -916 25 -160 54 -357 64 -437 11 -81 23 -151 27 -155 9 -9 -3 236 -21 423 -8 83 -37 296 -64 475 -44 289 -74 535 -82 670 -2 27 -6 3 -11 -60z"></path></g>
+            </svg>
+            <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Empresa</a></li>
                 <li><a href="producto-1.0.html">Productos</a></li>
@@ -31,8 +35,6 @@
             <li><a href="#" class="rrss"><i class="fab fa-tripadvisor"></i></a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
-    </header>
-    <main>
         <section class="wcome">
             <a href="#" class="lnk-logo">
                 <img src="media/logo-mo-v.svg" alt="Logo of Mushroom Organic" class="logo" width="50%"/>
@@ -43,6 +45,8 @@
                 <i class="fas fa-chevron-down"></i>
             </div>
         </section>
+    </header>
+    <main>
         <section class="bst-seller">
             <h2>Más vendidos</h2>
             <div class="product">
@@ -100,7 +104,7 @@
 	    </section>
     </main>
     <footer>
-        <img class ="logo" src="media/logo-mo-h-neg.svg" alt="logo of Mushroom Organic">
+        <img class ="logo-h" src="media/logo-mo-h-neg.svg" alt="logo of Mushroom Organic">
         <ul class="footer-rrss">
             <li><a href="#" class="rrss"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#" class="rrss"><i class="fab fa-twitter"></i></a></li>
