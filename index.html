@@ -1,104 +1,134 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>1.0_Olmo Mazcuñán S.L.</title>
-    <link href="CSS/estilos-1.0.css" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Courgette|Lobster|Lobster+Two:400,400i,700,700i|Merienda:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <script src="JS/jquery-3.4.1.min.js"></script>
     <script src="JS/scripts-1.0.js"></script>
-
 </head>
 
 <body>
-    <!-- CABECERA -->
     <header>
-            <nav>
-	            <img class ="logo" src="imagenes/logo-olmomazcunan-azul.png" alt="logo">
-	            <ul class="desplegable">
-	                  <li><a href="#">Inicio</a></li>
-	                  <li><a href="#">Empresa</a></li>
-	                  <li><a href="producto-1.0.html">Productos</a></li>
-	                  <li><a href="#">Import&Export</a></li>
-	                  <li><a href="#">Empleo</a></li>
-	                  <li><a href="#">Contacto</a></li>
-	            </ul>
-	            <i id="hamburguesa" class="fas fa-bars"></i>
-	        </nav>
-            
-            <div class="bienvenida">
-              <span>Bienvenido a <h1>Olmo Mazcuñán S.L</h1></span>
-              <h2>Te traemos los hongos más exóticos</h2>
-            </div>
-        
+        <nav>
+            <img class ="logo" src="media/logo-mo-v.svg" alt="logo of Mushroom Organic">
+            <ul class="nav-drop">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Empresa</a></li>
+                <li><a href="producto-1.0.html">Productos</a></li>
+                <li><a href="#">Import&Export</a></li>
+                <li><a href="#">Empleo</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <i id="nav-hmb" class="fas fa-bars"></i>
+        </nav>
+        <ul class="nav-rrss">
+            <li><a href="#" class="rrss"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="rrss"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="rrss"><i class="fab fa-tripadvisor"></i></a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
     </header>
-	<main>
-        <!-- <section class="contenido"> -->
-            <article>
-                <img src="imagenes/calidad-marron.svg" alt="calidad marron">
-                    <div class="titular-parrafo">
-                        <h2>Máxima Calidad</h2>
-                        <p>El objetivo principal de nuestra empresa es conseguir que nuestros clientes reciban los productos de la máxima calidad. Como demuestra nuestro certificado de calidad ISO 22000 </p>
-                    </div>
-            </article>
-            
-            <article>
-                    <div class="titular-parrafo">
-                        <h2>Presencia Mundial</h2>
-                        <p>En estos dos últimos años nos hemos consolidado como una de las mayores empresas de España en importación y exportación de hongos silvestres y cultivados.</p>
-                    </div>
-                <img src="imagenes/mundo-marron.svg" alt="mundo marro">
-            </article>
-            
-            <article>
-                <img src="imagenes/servicio-marron.svg" alt="sevicio marron">
-                    <div class="titular-parrafo">
-                        <h2>Servicio inmejorable</h2>
-                        <p>Un pilar esencial para nuestra empresa es el de brindar el mejor servicio a nuestros clientes con la maxima prontitud posible.</p>
-                    </div>
-            </article>
-            
-            <article>
-                    <div class="titular-parrafo">
-                        <h2>Gran variedad</h2>
-                        <p>Disponemos durante todo el año de una gran diversidad de hongos cultivados, además de los hongos silvestres comestibles de temporada.</p>
-                    </div>
-                <img src="imagenes/variedad-marron.svg" alt="Variedad marron">
-            </article>
+    <main>
+        <section class="wcome">
+            <a href="#" class="lnk-logo">
+                <img src="media/logo-mo-v.svg" alt="Logo of Mushroom Organic" class="logo" width="50%"/>
+            </a>
+            <div class="wcome-m">
+                <h2>Te traemos las setas más exóticas cultivadas de la forma más natural</h2>
+                <a href="#">Visita nuestra tienda</a>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+        <section class="bst-seller">
+            <h2>Más vendidos</h2>
+            <div class="product">
+                <h3>Nombre seta</h3>
+                <p><strong>Oferta</strong><span class="dsc-percentage">-20%</span></p>
+            </div>
+            <div class="product">
+                <h3>Nombre seta</h3>
+                <p><strong>Oferta</strong><span class="dsc-percentage">-20%</span></p>
+            </div>
+            <div class="product">
+                <h3>Nombre seta</h3>
+                <p><strong>Oferta</strong><span class="dsc-percentage">-20%</span></p>
+            </div>
+        </section>
+        <section class="agreemnt">
+            <h2>Nuestros compromisos</h2>
+            <div>
+                <img src="imagenes/calidad-marron.svg" alt="icon of quality"/>
+                <h2>Máxima Calidad</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi est inventore quibusdam iure quo, quas expedita, perspiciatis ex nobis reprehenderit magni.
+                </p>
+            </div>
+            <div>
+                <img src="imagenes/variedad-marron.svg" alt="icon of variety"/>
+                <h2>Gran variedad</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi est inventore quibusdam iure quo, quas expedita, perspiciatis ex nobis reprehenderit magni.
+                </p>
+            </div>
+            <div>
+                <img src="imagenes/mundo-marron.svg" alt="icon of global presence"/>
+                <h2>Presencia Mundial</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi est inventore quibusdam iure quo, quas expedita, perspiciatis ex nobis reprehenderit magni.
+                </p>
+            </div>
+            <div>
+                <img src="imagenes/servicio-marron.svg" alt="icon of service"/>
+                <h2>Servicio inmejorable</h2>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi est inventore quibusdam iure quo, quas expedita, perspiciatis ex nobis reprehenderit magni.
+                </p>
+            </div>
+        </section>
+        <section class="events">
+			<h2>Eventos</h2>
+            <iframe src="https://player.vimeo.com/video/372570796?title=0&portrait=0&byline=0&autoplay=0" width="70%" height="100px" frameborder="0"></iframe>
+			<h3>Shiitake Festival</h3>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi est inventore quibusdam iure quo, quas expedita, perspiciatis ex nobis reprehenderit magni laboriosam quidem aliquid ut quisquam hic nihil officiis. Voluptate!
+            </p>
+			<a href="#">Visita nuestro blog</a>
+	    </section>
     </main>
-
-	<section class="social">
-		<article>
-			<h4>!Síguenos!</h4>
-			<a href="#"><img src="imagenes/logo-blog.png" alt="logo del blog"></a>
-			<a href="#"><img src="imagenes/logo-facebook.png" alt="logo de facebook"></a>
-		</article>
-	</section>
-
-    <!-- PIE DE PÁGINA -->
     <footer>
-        <p class="contacto"><span>C/ Cuartero, 57 16230 Villanueva de la Jara (Cuenca) | </span>
-       <span> Tel. +34 967 498 188 | Fax. +34 967 498 004 |</span>
-        <span>comercial@olmomazcunan.com</span></p>
-       <div class="final">
-           <ul class="idioma">
-           <li>idiomas:</li>
-            <li><a href="#">español</a></li>
-            <li><a href="#">english</a></li>
+        <img class ="logo" src="media/logo-mo-h-neg.svg" alt="logo of Mushroom Organic">
+        <ul class="footer-rrss">
+            <li><a href="#" class="rrss"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="rrss"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#" class="rrss"><i class="fab fa-tripadvisor"></i></a></li>
         </ul>
-        <ul>
-            <li><a href="#">Política de Privacidad</a></li>
-            <li>|</li>
-            <li><a href="#">Condiciones de uso</a></li>
-            <li>|</li>
-            <li>&copy; 2019 Olmomazuñán, S.L. Todos los derechos reservados.</li>
-        </ul>
+        <p class="contact">
+            <span>C/ Calle, 99 99099 Población (Municipio) | </span>
+            <span> Tel. +34 999 999 999 | Fax. +34 999 999 999 |</span>
+            <span>comercial@mushroomsorganic.com</span>
+        </p>
+        <div class="final">
+            <ul class="idioma">
+            <li>idiomas:</li>
+                <li><a href="#">español</a></li>
+                <li><a href="#">english</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Política de Privacidad</a></li>
+                <li>|</li>
+                <li><a href="#">Condiciones de uso</a></li>
+                <li>|</li>
+                <li>&copy; 2019 Mushrooms Organic, S.L. Todos los derechos reservados.</li>
+            </ul>
+        </div>
+        <div class="by-my">
+            <p>Web prototype designed and developed by <strong class="I">Alejandro Peregrín Castro</strong></p>
         </div>
     </footer>
-    
 </body>
 
 </html>
