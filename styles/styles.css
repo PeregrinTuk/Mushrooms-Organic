@@ -386,6 +386,7 @@ main section{
 
 /* //  FOOTER  /////////////////////////////////////// */
 footer{
+    position: relative;
     padding: 20px 30px;
     
     color: #f0f0f0;
@@ -429,7 +430,70 @@ footer .logo-h{
 .footer-lang a{
     color: bisque;
 }
+.footer-cookies{
+    display: flex;
 
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    margin: 0;
+    padding: 10px 0;
+    border-top: solid 1px #f0f0f0;
+}
+.footer-cookies li:nth-of-type(1){
+    border-right: solid 1px #f0f0f0;
+}
+.footer-cookies a {
+    padding: 0 20px;
+    color: #f0f0f0;
+}
+.footer-copy{
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    width: 100vw;
+
+    left: -30px;
+
+    margin-bottom: 30vw;
+    padding: 10px 30px;
+
+    border-top: solid 1px #f0f0f0;
+}
+
+.by-my{
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    height: calc(30vw + 20px);
+    width: 100vw;
+
+    flex-flow: column nowrap;
+    justify-content: center;
+
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+
+    padding: 20px 30px;
+
+    color:floralwhite;
+    background-color: cornflowerblue;
+    box-shadow: 0 50px 40px -50px #2A292D inset;
+}
+.by-my p{
+    margin: 0;
+
+    text-align: center;
+}
+.by-my strong{
+    display: block;
+
+    padding-top: 10px;
+
+    font-size: 1.12rem;
+    letter-spacing: 0.02rem;
+}
 
 /* ========================== */
 
