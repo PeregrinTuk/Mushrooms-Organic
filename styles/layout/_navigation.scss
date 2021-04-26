@@ -1,0 +1,80 @@
+nav li a{
+    display: inline-block;
+
+}
+.nav-menu{
+    display: none;
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    z-index: 990;
+
+    background-color: #f0f0f0;
+}
+.nav-menu .logo{
+    position: absolute;
+
+    top: calc(50vh - 213px);
+    right: -150px;
+}
+
+.nav-menu ul{
+    display: block;
+    position: relative;
+
+    align-self: center;
+
+    margin: auto;
+    padding: 0 0 50px 0;
+
+    font-size: 1.75em;
+    text-align: center;
+}
+.nav-menu li a{
+    padding: 15px;
+
+    color: #2A292D;
+}
+.nav-menu li:nth-child(-n+5){
+    border-bottom: solid 2px hsl(270, 5%, 75%);
+}
+
+#nav-hmb{
+    display: block;
+    position: fixed;
+
+    right: 20px;
+    bottom: 30px;
+    z-index: 1000;
+
+    font-size: 50px;
+    color: #2A292D;
+    text-shadow: 0 0 20px bisque, 1px 1px 5px rgba(240, 240, 240, 0.5), -1px 1px 5px rgba(240, 240, 240, 0.5), 1px -1px 5px rgba(240, 240, 240, 0.5), -1px -1px 5px rgba(240, 240, 240, 0.5)
+}
+
+.nav-rrss{
+    display: flex;
+    position: relative;
+    height: 46px;
+
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    padding: 10px 20px 10px 20px;
+
+    font-size: 1.3rem;
+    background-color: #2A292D;
+}
+.nav-rrss li a{
+    color: #f0f0f0;
+}
+.nav-rrss .rrss{
+    padding-right: 20px;
+}
+.nav-rrss li:nth-last-child(1){
+    position: absolute;
+    align-self: center;
+    right: 20px;
+}

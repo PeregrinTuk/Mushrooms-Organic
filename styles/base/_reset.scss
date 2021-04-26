@@ -1,0 +1,12 @@
+*, ul {
+    margin: 0;
+    padding: 0;
+}
+dl, ol, ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: variables.$brand-light1;
+}
