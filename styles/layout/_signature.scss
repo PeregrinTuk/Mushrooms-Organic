@@ -1,6 +1,6 @@
 .by-me{
     height: calc(30vw + 20px);
-    width: 100vw;
+    width: calc(100% + 60px);
 
     display: flex;
     flex-flow: column nowrap;

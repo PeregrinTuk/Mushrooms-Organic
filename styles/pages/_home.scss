@@ -35,12 +35,10 @@ main{
             bottom: -45px;
         }
         .carousel-inner{
-            width: 100vw;
             padding: 20px 0;
 
             .carousel-item{
-                width: 80vw;
-                left: 10vw;
+                padding: 0 20px;
 
                 :nth-child(n){
                     text-align: center;
@@ -52,7 +50,7 @@ main{
             }
         }        
     }
-    @include mixins.backg-img-color-filter('.agreemnt', url(../assets/fondo-agreemnt.jpg), variables.$brand-dark1-07);
+    @include mixins.backg-img-color-filter('.agreemnt', variables.$img-backg-agreemnt, variables.$brand-dark1-07);
 
     /* == <section class="events"> ======================= */
     .events{

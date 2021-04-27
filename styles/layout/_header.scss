@@ -25,7 +25,7 @@ header{
             }
         }
         .wcome-m{
-            width: 100vw;
+            width: 100%;
             height: calc(100% - 50vh);
 
             @include mixins.flexbox(column);
@@ -58,6 +58,6 @@ header{
                 font-weight: 700;
             }
         }
-        @include mixins.backg-img-color-filter('.wcome-m', url(../assets/fondo-wcome.jpg), variables.$brand-dark1-05);
+        @include mixins.backg-img-color-filter('.wcome-m', variables.$img-backg-wcome-m, variables.$brand-dark1-05);
     }
 }

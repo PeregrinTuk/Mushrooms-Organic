@@ -13,6 +13,10 @@ a {
   color: #f0f0f0;
 }
 
+header, main, footer {
+  width: 100%;
+}
+
 body {
   font-family: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -93,7 +97,7 @@ body {
 
 nav .nav-menu {
   min-height: 100vh;
-  min-width: 100vw;
+  min-width: 100%;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -177,7 +181,7 @@ header .wcome .lnk-logo img {
   padding: 5vh 0;
 }
 header .wcome .wcome-m {
-  width: 100vw;
+  width: 100%;
   height: calc(100% - 50vh);
   display: flex;
   flex-flow: column nowrap;
@@ -261,12 +265,10 @@ main .agreemnt .carousel-indicators {
   bottom: -45px;
 }
 main .agreemnt .carousel-inner {
-  width: 100vw;
   padding: 20px 0;
 }
 main .agreemnt .carousel-inner .carousel-item {
-  width: 80vw;
-  left: 10vw;
+  padding: 0 20px;
 }
 main .agreemnt .carousel-inner .carousel-item :nth-child(n) {
   text-align: center;
@@ -367,7 +369,7 @@ footer .footer-cookies a {
   padding: 0 20px;
 }
 footer .footer-copy {
-  width: 100vw;
+  width: calc(100% + 60px);
   display: block;
   position: relative;
   left: -30px;
@@ -377,7 +379,7 @@ footer .footer-copy {
 
 .by-me {
   height: calc(30vw + 20px);
-  width: 100vw;
+  width: calc(100% + 60px);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;

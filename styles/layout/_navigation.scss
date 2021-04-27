@@ -1,7 +1,7 @@
 nav{
     .nav-menu{
         min-height: 100vh;
-        min-width: 100vw;
+        min-width: 100%;
 
         @include mixins.flexbox(column);
         justify-content: center;
