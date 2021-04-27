@@ -1,0 +1,70 @@
+.product{
+    width: 80vw;
+    height: calc(80vw * 9 / 16);
+    overflow: hidden;
+
+    display: block;
+
+    position: relative;
+
+    border-radius: 2px;
+    h3{
+        margin: 0;
+        padding: 1.2vw 1.5vw 10vw 2.5vw;
+
+        font-size: clamp(1.1rem, 5.5vw, 2rem);
+        color: variables.$brand-light2;
+        background: linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+        background: -webkit-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+        background: -moz-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+        background: -o-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+    }
+    .discount{
+        @include mixins.flexbox(column);
+        justify-content: space-evenly;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+
+        padding: 2.5vw;
+
+        letter-spacing: 1px;
+        font-weight: 900;
+        color: white;
+        text-align: center;
+        
+        strong{
+            font-size: clamp(15px, 4.5vw, 55px);
+        }
+        span{
+            font-size: clamp(15px, 5vw, 55px);
+        }
+    }
+    .discount::before{
+        content: "";
+        width: 101%;
+        height: 160%;
+
+        display: block;
+
+        position: absolute;
+        top: min(-20px, -6vw);
+        left: 0;
+        z-index: -10;
+        
+        transform: skewY(30deg);
+        background-color: red;
+        border-bottom-left-radius: 3px;
+        box-shadow: 0 0 12px variables.$brand-light2;
+    }
+}
+.prd-e-enoki-g{
+    background-image: url(../assets/prd-e-enoki-golden.jpg);
+    background-size: cover;
+}
+.prd-e-mix{
+    background-image: url(../assets/prd-e-mix-exoticas.jpg);
+    background-size: cover;
+}

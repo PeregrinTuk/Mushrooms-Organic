@@ -1,80 +1,76 @@
-nav li a{
-    display: inline-block;
+nav{
+    .nav-menu{
+        min-height: 100vh;
+        min-width: 100vw;
 
-}
-.nav-menu{
-    display: none;
-    position: fixed;
-    min-height: 100vh;
-    min-width: 100vw;
+        @include mixins.flexbox(column);
+        justify-content: center;
+        display: none;
 
-    z-index: 990;
+        position: fixed;
+        z-index: 990;
 
-    background-color: #f0f0f0;
-}
-.nav-menu .logo{
-    position: absolute;
+        background-color: variables.$brand-light1;
 
-    top: calc(50vh - 213px);
-    right: -150px;
-}
+        ul{
+            display: block;
 
-.nav-menu ul{
-    display: block;
-    position: relative;
+            position: relative;
 
-    align-self: center;
+            padding: 0 0 50px 0;
 
-    margin: auto;
-    padding: 0 0 50px 0;
+            font-size: 1.75em;
+            text-align: center;
+        }
+        li a{
+            display: inline-block;
 
-    font-size: 1.75em;
-    text-align: center;
-}
-.nav-menu li a{
-    padding: 15px;
+            padding: 15px;
 
-    color: #2A292D;
-}
-.nav-menu li:nth-child(-n+5){
-    border-bottom: solid 2px hsl(270, 5%, 75%);
-}
+            color: variables.$brand-dark1;
+        }
+        li:nth-child(-n+5){
+            border-bottom: variables.$border1;
+        }
+        .logo{
+            position: absolute;
+            top: calc(50vh - 213px);
+            right: -150px;
+        }
+    }
+    #nav-hmb{
+        display: block;
 
-#nav-hmb{
-    display: block;
-    position: fixed;
+        position: fixed;
+        right: 20px;
+        bottom: 30px;
+        z-index: 1000;
 
-    right: 20px;
-    bottom: 30px;
-    z-index: 1000;
+        font-size: 50px;
+        color: variables.$brand-dark1;
+        text-shadow: 0 0 20px variables.$brand-light2, 1px 1px 5px variables.$brand-light1-05, -1px 1px 5px variables.$brand-light1-05, 1px -1px 5px variables.$brand-light1-05, -1px -1px 5px variables.$brand-light1-05
+    }
+    .nav-rrss{
+        height: 46px;
 
-    font-size: 50px;
-    color: #2A292D;
-    text-shadow: 0 0 20px bisque, 1px 1px 5px rgba(240, 240, 240, 0.5), -1px 1px 5px rgba(240, 240, 240, 0.5), 1px -1px 5px rgba(240, 240, 240, 0.5), -1px -1px 5px rgba(240, 240, 240, 0.5)
-}
+        @include mixins.flexbox(row);
+        justify-content: flex-start;
 
-.nav-rrss{
-    display: flex;
-    position: relative;
-    height: 46px;
+        position: relative;
 
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+        padding: 10px 20px 10px 20px;
 
-    padding: 10px 20px 10px 20px;
+        font-size: 1.3rem;
+        background-color: variables.$brand-dark1;
 
-    font-size: 1.3rem;
-    background-color: #2A292D;
-}
-.nav-rrss li a{
-    color: #f0f0f0;
-}
-.nav-rrss .rrss{
-    padding-right: 20px;
-}
-.nav-rrss li:nth-last-child(1){
-    position: absolute;
-    align-self: center;
-    right: 20px;
-}
+        .rrss{
+            padding-right: 20px;
+        }
+        li:nth-last-child(1){
+            align-self: center;
+
+            position: absolute;
+            right: 20px;
+        }
+    }
+} 

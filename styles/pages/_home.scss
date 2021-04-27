@@ -1,173 +1,77 @@
-main section{
-    padding: 40px 20px;
-}
-.t-section{
-    margin-bottom: 20px;
+main{
+    section{
+        padding: 40px 20px;
+    }
+    .t-section{
+        margin-bottom: 20px;
 
-    font-weight: 700;
-    text-align: center;
-    text-transform: uppercase;
-    color: #2A292D;
-}
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: variables.$brand-dark1;
+    }
 
-/* == <section class="bst-seller"> ===================== */
-.bst-seller{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-}
-.bst-seller .product{
-    margin: 10px 0;
-}
-.product{
-    display: block;
-    position: relative;
-    width: 80vw;
-    height: calc(80vw * 9 / 16);
-
-    overflow: hidden;
-
-    border-radius: 2px;
-}
-.product h3{
-    margin: 0;
-    padding: 1.2vw 1.5vw 10vw 2.5vw;
-
-    font-size: clamp(1.1rem, 5.5vw, 2rem);
-    color: bisque;
-    background: linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
-    background: -webkit-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
-    background: -moz-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
-    background: -o-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
-}
-.product .discount{
-    display: flex;
-    position: absolute;
-    height: 30%;
-
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    top: 0;
-    right: 0;
-    z-index: 10;
-
-    padding: 2.5vw;
-
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-}
-.product .discount strong::before{
-    content: "";
-    display: block;
-    position: absolute;
-    width: 101%;
-    height: 160%;
-
-    top: min(-20px, -6vw);
-    left: 0;
-    z-index: -10;
+    /* == <section class="bst-seller"> ===================== */
+    .bst-seller{
+        @include mixins.flexbox(column);
+        .product{
+            margin: 10px 0;
+        }
+    }
     
-    transform: skewY(30deg);
-    background-color: red;
-    border-bottom-left-radius: 3px;
-    box-shadow: 0 0 12px bisque;
-}
-.product .discount strong{
-    font-size: clamp(15px, 4.5vw, 55px);
-}
-.product .discount span{
-    font-size: clamp(15px, 5vw, 55px);
-}
-.prd-e-enoki-g{
-    background-image: url(../assets/prd-e-enoki-golden.jpg);
-    background-size: cover;
-}
-.prd-e-mix{
-    background-image: url(../assets/prd-e-mix-exoticas.jpg);
-    background-size: cover;
-}
+    /* == <section class="agreemnt"> ===================== */
+    .agreemnt{
+        @include mixins.flexbox(column);
+        
+        position: relative;
 
-/* == <section class="agreemnt"> ===================== */
-.agreemnt{
-    position: relative;
-    display: flex;
+        color: variables.$brand-light1;
+        background-attachment: fixed;
+        
+        .t-section{
+            color: variables.$brand-light1;
+        }
+        .carousel-indicators{
+            bottom: -45px;
+        }
+        .carousel-inner{
+            width: 100vw;
+            padding: 20px 0;
 
-    flex-flow: column nowrap;
-    align-items: center;
-    
-    color: #f0f0f0;
-    background-image: url('../assets/fondo-agreemnt.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-.agreemnt .t-section{
-    color: #f0f0f0;
-}
-.agreemnt > :nth-child(n){
-    z-index: 10;
-}
-.agreemnt>h2::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
+            .carousel-item{
+                width: 80vw;
+                left: 10vw;
 
-    bottom: 0;
-    left: 0;
-    z-index: -10;
+                :nth-child(n){
+                    text-align: center;
+                    text-shadow: 0 0 10px variables.$brand-dark1;
+                }
+                h3{
+                    color: variables.$brand-light2;
+                }
+            }
+        }        
+    }
+    @include mixins.backg-img-color-filter('.agreemnt', url(../assets/fondo-agreemnt.jpg), variables.$brand-dark1-07);
 
-    background-color: rgba(42, 41, 45, 0.7);
-}
-.carousel-indicators{
-    bottom: -45px;
-}
-.carousel-inner{
-    width: 100vw;
-    padding: 20px 0;
-}
-.carousel-item{
-    width: 80vw;
-    
-    left: 10vw;
-}
-.carousel-item h3{
-    color: bisque;
-}
-.carousel-item :nth-child(n){
-    text-align: center;
-    text-shadow: 0 0 10px #2A292D;
-}
+    /* == <section class="events"> ======================= */
+    .events{
+        @include mixins.flexbox(column);
+        justify-content: space-around;
 
-/* == <section class="events"> ======================= */
-.events{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
-}
-.events :not(a){
-    width: 80vw;
-}
-.events h3{
-    font-weight: 600;
-}
-.events p{
-    margin-bottom: 1.75rem;
-}
-.events iframe{
-    height: calc(80vw * 9 / 16);
+        :not(a){
+            width: 80vw;
+        }
+        h3{
+            font-weight: 600;
+        }
+        p{
+            margin-bottom: 1.75rem;
+        }
+        iframe{
+            height: calc(80vw * 9 / 16);
 
-    margin: 10px 0;
-}
-.events a{
-    display: inline-block;
-    padding: 10px 20px;
-
-    color: bisque;
-    background-color: #2A292D;
-    border-radius: 5px;
-    box-shadow: 0 0 12px bisque;
-}
+            margin: 10px 0;
+        }
+    }    
+} 

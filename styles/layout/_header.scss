@@ -1,86 +1,63 @@
 header{
     min-height: 100vh;
-}
-.wcome{
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 46px);
+    
+    .wcome{
+        width: 100%;
+        height: calc(100vh - 46px);
 
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
+        @include mixins.flexbox(column);
+        justify-content: space-between;
 
-    background-color: #f0f0f0;
-}
-.wcome .lnk-logo{
-    display: block;
-    min-height: 40vh;
-    flex-grow: 2;
-}
-.wcome .lnk-logo img{
-    display: block;
-    box-sizing: border-box;
-    min-width: 70vw;
-    height: calc(100%);
+        background-color: variables.$brand-light1;
+        
+        .lnk-logo{
+            min-height: 40vh;
 
-    margin: auto;
-    padding: 5vh 0 5vh 0;
-}
-.wcome-m>:nth-child(n){
-    display: block;
-    max-width: 80%;
+            display: block;
 
-    z-index: 10;
+            img{
+                display: block;
+                min-width: 70vw;
+                height: calc(100%);
 
-    text-align: center;
-}
-.wcome-m i:nth-last-child(1){
-    position: relative;
-    bottom: 0;
+                margin: auto;
+                padding: 5vh 0;
+            }
+        }
+        .wcome-m{
+            width: 100vw;
+            height: calc(100% - 50vh);
 
-    font-size: 2rem;
-}
-.wcome-m{
-    display: flex;
-    position: relative;
-    box-sizing: border-box;
-    width: 100vw;
-    height: calc(100% - 50vh);
+            @include mixins.flexbox(column);
+            justify-content: space-evenly;
+            flex-grow: 2;
 
-    flex-flow: column nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-grow: 2;
+            position: relative;
+            bottom: 0;
 
-    bottom: 0;
+            color: variables.$brand-light1;
+            background-attachment: fixed;
 
-    color: #f0f0f0;
-    background-image: url('../assets/fondo-wcome.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-}
-.wcome-m h2::before{
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
+            > :nth-child(n){
+                max-width: 80%;
 
-    bottom: 0;
-    left: 0;
-    z-index: -10;
+                display: block;
 
-    background-color: rgba(42, 41, 45, 0.5);
-}
-.wcome-m h2{
-    margin-top: 4vh;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-.wcome-m a{
-    padding: 10px 20px;
+                text-align: center;
+            }
+            i:nth-last-child(1){
+                position: relative;
+                bottom: 0;
 
-    color: bisque;
-    background-color: #2A292D;
-    border-radius: 5px;
-    box-shadow: 0 0 12px bisque;
+                font-size: 2rem;
+            }
+            h2{
+                margin-top: 4vh;
+
+                font-size: 1.4rem;
+                font-weight: 700;
+            }
+        }
+        @include mixins.backg-img-color-filter('.wcome-m', url(../assets/fondo-wcome.jpg), variables.$brand-dark1-05);
+    }
 }

@@ -1,7 +1,10 @@
 @use 'abstracts/variables';
-@import 'abstracts/class';
+@use 'abstracts/mixins';
 @import 'base/reset';
 @import 'base/typography';
+@import 'components/buttons';
+@import 'components/hidden';
+@import 'components/products';
 @import 'layout/navigation';
 @import 'layout/header';
 @import 'pages/home';
