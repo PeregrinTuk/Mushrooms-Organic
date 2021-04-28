@@ -1,4 +1,4 @@
-*, ul, p {
+*, h1, h2, h3, p, ul {
   margin: 0;
   padding: 0;
 }
@@ -47,7 +47,6 @@ body {
   font-size: clamp(1.1rem, 5.5vw, 2rem);
   color: bisque;
   background: linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
-  background: -o-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
 }
 .product .discount {
   display: flex;
@@ -105,18 +104,18 @@ nav .nav-menu {
   display: none;
   position: fixed;
   z-index: 990;
-  background-color: #f0f0f0;
+  background-color: #f0f0f0f2;
+  font-size: clamp(1rem, 5vh, 1.75rem);
+  text-align: center;
 }
 nav .nav-menu ul {
   display: block;
   position: relative;
-  padding: 0 0 50px 0;
-  font-size: 1.75em;
-  text-align: center;
+  padding-bottom: 50px;
 }
 nav .nav-menu li a {
   display: inline-block;
-  padding: 15px;
+  padding: clamp(10px, 5vh, 15px);
   color: #2A292D;
 }
 nav .nav-menu li:nth-child(-n+5) {
@@ -149,7 +148,7 @@ nav .nav-rrss {
   background-color: #2A292D;
 }
 nav .nav-rrss .rrss {
-  padding-right: 20px;
+  padding-right: 5vw;
 }
 nav .nav-rrss li:nth-last-child(1) {
   align-self: center;
@@ -157,6 +156,15 @@ nav .nav-rrss li:nth-last-child(1) {
   right: 20px;
 }
 
+@media (min-width: 500px) and (orientation: landscape) {
+  nav .nav-menu {
+    min-width: 50%;
+    right: 0;
+  }
+  nav .nav-menu ul {
+    padding-bottom: 4vh;
+  }
+}
 header {
   min-height: 100vh;
 }
@@ -175,8 +183,7 @@ header .wcome .lnk-logo {
 }
 header .wcome .lnk-logo img {
   display: block;
-  min-width: 70vw;
-  height: calc(100%);
+  height: 100%;
   margin: auto;
   padding: 5vh 0;
 }
@@ -186,7 +193,7 @@ header .wcome .wcome-m {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-grow: 2;
   position: relative;
   bottom: 0;
@@ -204,9 +211,11 @@ header .wcome .wcome-m i:nth-last-child(1) {
   font-size: 2rem;
 }
 header .wcome .wcome-m h2 {
-  margin-top: 4vh;
-  font-size: 1.4rem;
+  margin-top: 5vh;
+  font-size: clamp(1.5rem, calc(1rem + 1.5vh), 2rem);
+  letter-spacing: 0.02rem;
   font-weight: 700;
+  text-shadow: 0 0 10px #2A292D;
 }
 header .wcome .wcome-m {
   display: flex;
@@ -227,6 +236,26 @@ header .wcome .wcome-m::before {
   background-color: #2a292d80;
 }
 
+@media (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
+  header .wcome .lnk-logo {
+    max-width: 40vw;
+    height: calc(100vh - 46px);
+    position: absolute;
+    left: 20px;
+    z-index: 10;
+  }
+  header .wcome .lnk-logo img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  header .wcome .wcome-m {
+    padding-left: 40vw;
+  }
+  header .wcome .wcome-m .fa-chevron-down {
+    margin-right: 40vw;
+  }
+}
 main {
   /* == <section class="bst-seller"> ===================== */
   /* == <section class="agreemnt"> ===================== */
@@ -275,6 +304,7 @@ main .agreemnt .carousel-inner .carousel-item :nth-child(n) {
   text-shadow: 0 0 10px #2A292D;
 }
 main .agreemnt .carousel-inner .carousel-item h3 {
+  margin-bottom: 2vh;
   color: bisque;
 }
 main .agreemnt {
@@ -304,15 +334,16 @@ main .events {
 main .events :not(a) {
   width: 80vw;
 }
+main .events iframe {
+  height: calc(80vw * 9 / 16);
+  margin: 2vh 0;
+}
 main .events h3 {
+  margin-bottom: 1vh;
   font-weight: 600;
 }
 main .events p {
   margin-bottom: 1.75rem;
-}
-main .events iframe {
-  height: calc(80vw * 9 / 16);
-  margin: 10px 0;
 }
 
 footer {
@@ -378,7 +409,6 @@ footer .footer-copy {
 }
 
 .by-me {
-  height: calc(30vw + 20px);
   width: calc(100% + 60px);
   display: flex;
   flex-flow: column nowrap;
@@ -387,23 +417,25 @@ footer .footer-copy {
   bottom: 0;
   left: -30px;
   z-index: 1200;
-  padding: 20px 30px;
+  padding: 40px 30px;
+  font-size: min(1.3rem, 4vw);
   color: floralwhite;
   background-image: url(../assets/fondo-by-me.jpg);
   background-size: cover;
-  background-position: center -100px;
+  background-position: center -30vw;
 }
 .by-me > :nth-child(n) {
   z-index: 10;
 }
 .by-me p {
+  font-size: 1em;
   text-align: center;
   text-shadow: 0 0 12px #01193d;
 }
 .by-me strong {
   display: block;
   padding-top: 10px;
-  font-size: 1.12rem;
+  font-size: 1.2em;
   letter-spacing: 0.02rem;
 }
 

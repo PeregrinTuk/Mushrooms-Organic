@@ -1,5 +1,4 @@
-.by-me{
-    height: calc(30vw + 20px);
+.by-me {
     width: calc(100% + 60px);
 
     display: flex;
@@ -11,39 +10,41 @@
     left: -30px;
     z-index: 1200;
 
-    padding: 20px 30px;
+    padding: 40px 30px;
 
+    font-size: min(1.3rem, 4vw);
     color:floralwhite;
     background-image: url(../assets/fondo-by-me.jpg);
     background-size: cover;
-    background-position: center -100px;
+    background-position: center -30vw;
     
-    > :nth-child(n){
+    > :nth-child(n) {
         z-index: 10;
     }
-    p{
+    p {
+        font-size: 1em;
         text-align: center;
         text-shadow: 0 0 12px hsl(216deg 98% 12%);
     }
-    strong{
+    strong {
         display: block;
 
         padding-top: 10px;
 
-        font-size: 1.12rem;
+        font-size: 1.2em;
         letter-spacing: 0.02rem;
     }
 }
-.by-me::before{
-        content: "";
-        width: 100%;
-        height: 100%;
+.by-me::before {
+    content: "";
+    width: 100%;
+    height: 100%;
 
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
 
-        background-color: hsl(212deg 75% 50% / 75%); //<- #2079dfbf
-        box-shadow: 0 30px 20px -20px #030c16 inset;
-    }
+    background-color: hsl(212deg 75% 50% / 75%); //<- #2079dfbf
+    box-shadow: 0 30px 20px -20px #030c16 inset;
+}

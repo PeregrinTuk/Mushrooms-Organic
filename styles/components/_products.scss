@@ -1,4 +1,4 @@
-.product{
+.product {
     width: 80vw;
     height: calc(80vw * 9 / 16);
     overflow: hidden;
@@ -8,18 +8,19 @@
     position: relative;
 
     border-radius: 2px;
-    h3{
+    h3 {
         margin: 0;
         padding: 1.2vw 1.5vw 10vw 2.5vw;
 
         font-size: clamp(1.1rem, 5.5vw, 2rem);
         color: variables.$brand-light2;
-        background: linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
         background: -webkit-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+        background: -ms-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
         background: -moz-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
         background: -o-linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
+        background: linear-gradient(to bottom, #2A292D, rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 0));
     }
-    .discount{
+    .discount {
         @include mixins.flexbox(column);
         justify-content: space-evenly;
 
@@ -35,14 +36,14 @@
         color: white;
         text-align: center;
         
-        strong{
+        strong {
             font-size: clamp(15px, 4.5vw, 55px);
         }
-        span{
+        span {
             font-size: clamp(15px, 5vw, 55px);
         }
     }
-    .discount::before{
+    .discount::before {
         content: "";
         width: 101%;
         height: 160%;
@@ -60,11 +61,11 @@
         box-shadow: 0 0 12px variables.$brand-light2;
     }
 }
-.prd-e-enoki-g{
-    background-image: url(../assets/prd-e-enoki-golden.jpg);
+.prd-e-enoki-g {
+    background-image: variables.$img-product-e-enoki-g;
     background-size: cover;
 }
-.prd-e-mix{
-    background-image: url(../assets/prd-e-mix-exoticas.jpg);
+.prd-e-mix {
+    background-image: variables.$img-product-e-mix;
     background-size: cover;
 }

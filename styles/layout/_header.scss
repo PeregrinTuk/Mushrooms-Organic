@@ -1,7 +1,7 @@
-header{
+header {
     min-height: 100vh;
     
-    .wcome{
+    .wcome {
         width: 100%;
         height: calc(100vh - 46px);
 
@@ -10,26 +10,25 @@ header{
 
         background-color: variables.$brand-light1;
         
-        .lnk-logo{
+        .lnk-logo {
             min-height: 40vh;
 
             display: block;
 
-            img{
+            img {
                 display: block;
-                min-width: 70vw;
-                height: calc(100%);
+                height: 100%;
 
                 margin: auto;
                 padding: 5vh 0;
             }
         }
-        .wcome-m{
+        .wcome-m {
             width: 100%;
             height: calc(100% - 50vh);
 
             @include mixins.flexbox(column);
-            justify-content: space-evenly;
+            justify-content: space-around;
             flex-grow: 2;
 
             position: relative;
@@ -38,26 +37,57 @@ header{
             color: variables.$brand-light1;
             background-attachment: fixed;
 
-            > :nth-child(n){
+            > :nth-child(n) {
                 max-width: 80%;
 
                 display: block;
 
                 text-align: center;
             }
-            i:nth-last-child(1){
+            i:nth-last-child(1) {
                 position: relative;
                 bottom: 0;
 
                 font-size: 2rem;
             }
-            h2{
-                margin-top: 4vh;
+            h2 {
+                margin-top: 5vh;
 
-                font-size: 1.4rem;
+                font-size: clamp(1.5rem, calc(1rem + 1.5vh), 2rem);
+                letter-spacing: 0.02rem;
                 font-weight: 700;
+                text-shadow: 0 0 10px variables.$brand-dark1;
             }
         }
         @include mixins.backg-img-color-filter('.wcome-m', variables.$img-backg-wcome-m, variables.$brand-dark1-05);
+    }
+}
+
+@media (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
+    header {
+        .wcome {
+            .lnk-logo {
+                max-width: 40vw;
+                height: calc(100vh - 46px);
+
+                position: absolute;
+                left: 20px;
+                z-index: 10;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    margin: 0;
+                }
+            }
+            .wcome-m {
+                padding-left: 40vw;
+
+                .fa-chevron-down {
+                    margin-right: 40vw;
+                }
+            }
+        }
     }
 }

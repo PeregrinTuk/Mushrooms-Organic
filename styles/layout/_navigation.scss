@@ -1,5 +1,5 @@
-nav{
-    .nav-menu{
+nav {
+    .nav-menu {
         min-height: 100vh;
         min-width: 100%;
 
@@ -10,35 +10,34 @@ nav{
         position: fixed;
         z-index: 990;
 
-        background-color: variables.$brand-light1;
+        background-color: variables.$brand-light1-95;
+        font-size: clamp(1rem, 5vh, 1.75rem);
+        text-align: center;
 
-        ul{
+        ul {
             display: block;
 
             position: relative;
 
-            padding: 0 0 50px 0;
-
-            font-size: 1.75em;
-            text-align: center;
+            padding-bottom: 50px;
         }
-        li a{
+        li a {
             display: inline-block;
 
-            padding: 15px;
+            padding: clamp(10px, 5vh, 15px);
 
             color: variables.$brand-dark1;
         }
-        li:nth-child(-n+5){
+        li:nth-child(-n+5) {
             border-bottom: variables.$border1;
         }
-        .logo{
+        .logo {
             position: absolute;
             top: calc(50vh - 213px);
             right: -150px;
         }
     }
-    #nav-hmb{
+    #nav-hmb {
         display: block;
 
         position: fixed;
@@ -50,7 +49,7 @@ nav{
         color: variables.$brand-dark1;
         text-shadow: 0 0 20px variables.$brand-light2, 1px 1px 5px variables.$brand-light1-05, -1px 1px 5px variables.$brand-light1-05, 1px -1px 5px variables.$brand-light1-05, -1px -1px 5px variables.$brand-light1-05
     }
-    .nav-rrss{
+    .nav-rrss {
         height: 46px;
 
         @include mixins.flexbox(row);
@@ -63,8 +62,8 @@ nav{
         font-size: 1.3rem;
         background-color: variables.$brand-dark1;
 
-        .rrss{
-            padding-right: 20px;
+        .rrss {
+            padding-right: 5vw;
         }
         li:nth-last-child(1){
             align-self: center;
@@ -73,4 +72,18 @@ nav{
             right: 20px;
         }
     }
-} 
+}
+
+@media (min-width: 500px) and (orientation: landscape) {
+    nav {
+        .nav-menu {
+            min-width: 50%;
+
+            right: 0;
+
+            ul {
+                padding-bottom: 4vh;
+            }
+        }
+    }
+}
