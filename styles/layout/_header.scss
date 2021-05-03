@@ -63,7 +63,7 @@ header {
     }
 }
 
-@media (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
+@media screen and (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
     header {
         .wcome {
             .lnk-logo {

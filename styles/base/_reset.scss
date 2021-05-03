@@ -10,6 +10,9 @@ a {
     cursor: pointer;
     color: variables.$brand-light1;
 }
+a:hover {
+    color: variables.$brand-light2;
+}
 header, main, footer{
     width: 100%;
 }

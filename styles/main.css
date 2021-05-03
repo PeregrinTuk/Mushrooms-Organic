@@ -13,6 +13,10 @@ a {
   color: #f0f0f0;
 }
 
+a:hover {
+  color: bisque;
+}
+
 header, main, footer {
   width: 100%;
 }
@@ -22,15 +26,15 @@ body {
 }
 
 .button1 {
-  padding: 10px 20px;
+  padding: 0.65em 1.25em;
   color: bisque;
   background-color: #2A292D;
   border-radius: 5px;
-  box-shadow: 0 0 12px bisque;
+  box-shadow: 0 0 12px bisque, 0 0 2px #ffe4c480 inset;
 }
 
-.hidden {
-  display: none !important;
+.button1:hover {
+  box-shadow: 0 0 12px bisque, 0 0 20px #ffe4c480 inset;
 }
 
 .product {
@@ -156,7 +160,7 @@ nav .nav-rrss li:nth-last-child(1) {
   right: 20px;
 }
 
-@media (min-width: 500px) and (orientation: landscape) {
+@media screen and (min-width: 500px) and (orientation: landscape) {
   nav .nav-menu {
     min-width: 50%;
     right: 0;
@@ -236,7 +240,7 @@ header .wcome .wcome-m::before {
   background-color: #2a292d80;
 }
 
-@media (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
+@media screen and (min-width: 30em) and (orientation: landscape), (min-width: 50em) {
   header .wcome .lnk-logo {
     max-width: 40vw;
     height: calc(100vh - 46px);
