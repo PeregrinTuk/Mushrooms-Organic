@@ -1,5 +1,4 @@
-# Mushrooms-Organic #
-#-------------------#
+# Mushrooms-Organic
 
 Este proyecto es un campo de pruebas personal para poder jugar y experimentar con HTML5, CSS y sobre todo con JS. Cualquier issue constructivo es más que bienvenido ;D
 
