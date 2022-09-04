@@ -17,6 +17,7 @@ For this project, I will use the three basic web languages:
 
 - HTML
 - CSS
+- Sass
 - JS
 
 ## Collaboration
