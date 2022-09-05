@@ -21,4 +21,4 @@ For this project, I will use the three basic web languages:
 - JS
 
 ## Collaboration
-If you want to collaborate with this project, you are free to make any suggestion by opening a Discussion or an Issue. ;D
+If you want to collaborate with this project, you are free to make any suggestion by opening a Discussion, an Issue or a Pull request. ;D
