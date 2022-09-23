@@ -14,10 +14,9 @@ This project is a testing ground created to train my HTML, CSS and JS skills. Al
 This is the website of Mushrooms Organic, a made-up company dedicated to the sale and distribution of mushrooms for food use.
 
 
-#### Project status
-W.I.P. [ Phase -> Mobile version ]
-<!--
--->
+## Project status
+WIP [ Phase -> Mobile version ]
+
 
 ## Technologies
 For this project, I will use:
