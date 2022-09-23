@@ -15,7 +15,7 @@ This is the website of Mushrooms Organic, a made-up company dedicated to the sal
 
 
 #### Project status
-W.I.P. [Phase -> Mobile version]
+W.I.P. [ Phase -> Mobile version ]
 <!--
 -->
 
